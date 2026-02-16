@@ -56,6 +56,6 @@ ApplicationWindow {
     StackView {
         id: stack
         anchors.fill: parent
-        initialItem: MenuScreen { }
+        initialItem: "MenuScreen.qml"
     }
 }

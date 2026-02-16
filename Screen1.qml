@@ -1,6 +1,17 @@
+////////////////////////////////////////////////////
+//////////////////// KARI IHAB ////////////////////
+//////////////////////////////////////////////////
+
 import QtQuick
 import QtQuick.Controls
 
-Item {
 
+//Screen1
+Item {
+    anchors.fill: parent
+
+    Label {
+        anchors.centerIn: parent
+        text: "Screen1 (Timer UI will be implemented next)"
+    }
 }

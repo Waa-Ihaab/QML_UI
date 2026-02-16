@@ -4,7 +4,8 @@ project(sans_titre13 VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Quick)
+find_package(Qt6 REQUIRED COMPONENTS Quick QuickControls2)
+
 
 qt_standard_project_setup(REQUIRES 6.8)
 
@@ -13,11 +14,11 @@ qt_add_executable(appsans_titre13
 )
 
 qt_add_qml_module(appsans_titre13
-    URI sans_titre13
+    URI folderQMT
     QML_FILES
         Main.qml
-        QML_FILES MenuScreen.qml
-        QML_FILES Screen1.qml
+        MenuScreen.qml
+        Screen1.qml
         RESOURCES File.gitignore
 )
 

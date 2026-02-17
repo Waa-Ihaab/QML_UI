@@ -8,7 +8,6 @@ Item {
 
     Rectangle {
         anchors.fill: parent
-        color: "white"
 
         GridLayout {
             anchors.centerIn: parent

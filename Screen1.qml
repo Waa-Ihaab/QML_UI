@@ -3,85 +3,82 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 Item {
-    id: root
     anchors.fill: parent
 
     Rectangle {
         anchors.fill: parent
-        color: "#f2f2f2"
     }
 
     ColumnLayout {
         anchors.centerIn: parent
-        spacing: 18
+        spacing: 20
 
         Label {
             text: "screen 1"
             font.pixelSize: 44
             font.bold: true
-            horizontalAlignment: Text.AlignHCenter
             Layout.alignment: Qt.AlignHCenter
         }
 
         GroupBox {
             title: "GroupBox title"
-            Layout.preferredWidth: 820
-            Layout.preferredHeight: 360
+            Layout.preferredWidth: 700
+            Layout.preferredHeight: 320
+            Layout.alignment: Qt.AlignHCenter
 
-            ColumnLayout {
+            GridLayout {
                 anchors.fill: parent
-                anchors.margins: 22
-                spacing: 16
+                anchors.margins: 25
 
-                //Label/Field
-                GridLayout {
-                    columns: 2
-                    columnSpacing: 24
-                    rowSpacing: 14
-                    Layout.fillWidth: true
+                columns: 2
+                columnSpacing: 40
+                rowSpacing: 18
 
-                    //Field1
-                    Label { text: "title1 (Label)"; Layout.alignment: Qt.AlignVCenter }
-                    TextField {
-                        placeholderText: "Field1 (LineEdit)"
-                        text: "Field1"
-                        Layout.fillWidth: true
-                    }
+                //ROW1
+                Label {
+                    text: "title1 (Label)"
+                    Layout.alignment: Qt.AlignHCenter
+                }
 
-                    //Field2
-                    Label { text: "title2 (Label)"; Layout.alignment: Qt.AlignVCenter }
-                    TextField {
-                        placeholderText: "Field2 (LineEdit)"
-                        text: "Field2"
-                        Layout.fillWidth: true
-                    }
+                TextField {
+                    text: "Field1 (LineEdit)"
+                    Layout.preferredWidth: 250
+                }
 
-                    //Spacer
-                    Item { Layout.columnSpan: 2; Layout.preferredHeight: 6 }
+                //ROW2
+                Label {
+                    text: "title2 (Label)"
+                    Layout.alignment: Qt.AlignHCenter
+                }
 
-                    //Btn1
-                    Button {
-                        text: "Btn1 (Button)"
-                        Layout.columnSpan: 2
-                        Layout.preferredWidth: 420
-                        Layout.alignment: Qt.AlignHCenter
-                    }
+                TextField {
+                    text: "Field2 (LineEdit)"
+                    Layout.preferredWidth: 250
+                }
 
-                    //Btn2
-                    Button {
-                        text: "Btn2 (Button)"
-                        Layout.columnSpan: 2
-                        Layout.preferredWidth: 420
-                        Layout.alignment: Qt.AlignHCenter
-                    }
+                //BTN1
+                Button {
+                    text: "Btn1 (Button)"
+                    Layout.columnSpan: 2
+                    Layout.preferredWidth: 280
+                    Layout.alignment: Qt.AlignHCenter
+                }
+                Button {
+                    text: "Btn2 (Button)"
+                    Layout.columnSpan: 2
+                    Layout.preferredWidth: 280
+                    Layout.alignment: Qt.AlignHCenter
+                }
 
-                    //Field4
-                    Label { text: "title4 (Label)"; Layout.alignment: Qt.AlignVCenter }
-                    TextField {
-                        placeholderText: "Field4 (LineEdit)"
-                        text: "Field4"
-                        Layout.fillWidth: true
-                    }
+                Label {
+                    text: "title4 (Label)"
+                    Layout.alignment: Qt.AlignHCenter
+                }
+
+                //ROW4
+                TextField {
+                    text: "Field4 (LineEdit)"
+                    Layout.preferredWidth: 250
                 }
             }
         }

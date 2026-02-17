@@ -25,6 +25,11 @@ ApplicationWindow {
 
     //Top menu bar
     header: ToolBar {
+
+        background: Rectangle {
+                color: "#d9d9d9"
+        }
+
         RowLayout {
             anchors.fill: parent
             spacing: 10
@@ -41,7 +46,9 @@ ApplicationWindow {
 
             //Buttons (a, b, c)
             RowLayout {
-                spacing: 8
+                spacing: 10
+                Layout.alignment: Qt.AlignHCenter
+
                 ToolButton { text: "a" }
                 ToolButton { text: "b" }
                 ToolButton { text: "c" }

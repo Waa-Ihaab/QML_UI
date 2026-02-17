@@ -40,4 +40,14 @@ This helped me better understand QML navigation and component context.
 
 ---
 
+## 🖼️ UI Preview
+
+### MenuScreen
+![MenuScreen](ResutlsUI/MenuScreen.png)
+
+### Screen1
+![Screen1](ResutlsUI/Screen1.png)
+
+---
+
 Thank you for reviewing my work.

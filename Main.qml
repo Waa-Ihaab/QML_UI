@@ -52,7 +52,10 @@ ApplicationWindow {
                 ToolButton { text: "a" }
                 ToolButton { text: "b" }
                 ToolButton { text: "c" }
+
             }
+
+
 
             Item { Layout.fillWidth: true }
         }

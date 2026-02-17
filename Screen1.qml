@@ -6,8 +6,9 @@ Item {
     anchors.fill: parent
 
     Rectangle {
-        anchors.fill: parent
-    }
+            anchors.fill: parent
+            color: "#f2f2f2"
+        }
 
     ColumnLayout {
         anchors.centerIn: parent
@@ -58,16 +59,31 @@ Item {
 
                 //BTN1
                 Button {
+
                     text: "Btn1 (Button)"
                     Layout.columnSpan: 2
                     Layout.preferredWidth: 280
                     Layout.alignment: Qt.AlignHCenter
+
+                    background: Rectangle {
+                        color: "#e6e6e6"
+                        radius: 6
+                        border.color: "#bbbbbb"
+                    }
                 }
+
+                //BTN2
                 Button {
                     text: "Btn2 (Button)"
                     Layout.columnSpan: 2
                     Layout.preferredWidth: 280
                     Layout.alignment: Qt.AlignHCenter
+
+                    background: Rectangle {
+                        color: "#e6e6e6"
+                        radius: 6
+                        border.color: "#bbbbbb"
+                    }
                 }
 
                 Label {

@@ -1,14 +1,19 @@
-import QtQuick
-import QtQuick.Controls
-import QtQuick.Layouts
+import QtQuick 2.15
+import QtQuick.Controls 2.15
+import QtQuick.Layouts 1.15
+import MyApp 1.0
 
 Item {
     anchors.fill: parent
 
+    TimerBackend {
+        id: myTimer
+    }
+
     Rectangle {
-            anchors.fill: parent
-            color: "#f2f2f2"
-        }
+        anchors.fill: parent
+        color: "#f2f2f2"
+    }
 
     ColumnLayout {
         anchors.centerIn: parent
@@ -30,23 +35,23 @@ Item {
             GridLayout {
                 anchors.fill: parent
                 anchors.margins: 25
-
                 columns: 2
                 columnSpacing: 40
                 rowSpacing: 18
 
-                //ROW1
+                // ROW1
                 Label {
                     text: "title1 (Label)"
                     Layout.alignment: Qt.AlignHCenter
                 }
 
                 TextField {
-                    text: "Field1 (LineEdit)"
+                    text: myTimer.seconds
+                    readOnly: true
                     Layout.preferredWidth: 250
                 }
 
-                //ROW2
+                // ROW2
                 Label {
                     text: "title2 (Label)"
                     Layout.alignment: Qt.AlignHCenter
@@ -57,10 +62,9 @@ Item {
                     Layout.preferredWidth: 250
                 }
 
-                //BTN1
+                // BTN1 (Toggle Timer)
                 Button {
-
-                    text: "Btn1 (Button)"
+                    text: "Start/Pause Timer"
                     Layout.columnSpan: 2
                     Layout.preferredWidth: 280
                     Layout.alignment: Qt.AlignHCenter
@@ -70,11 +74,13 @@ Item {
                         radius: 6
                         border.color: "#bbbbbb"
                     }
+
+                    onClicked: myTimer.timer()
                 }
 
-                //BTN2
+                // BTN2 (Reset Timer)
                 Button {
-                    text: "Btn2 (Button)"
+                    text: "Reset Timer"
                     Layout.columnSpan: 2
                     Layout.preferredWidth: 280
                     Layout.alignment: Qt.AlignHCenter
@@ -83,6 +89,10 @@ Item {
                         color: "#e6e6e6"
                         radius: 6
                         border.color: "#bbbbbb"
+                    }
+
+                    onClicked: {
+                        myTimer.reset();
                     }
                 }
 
@@ -91,7 +101,7 @@ Item {
                     Layout.alignment: Qt.AlignHCenter
                 }
 
-                //ROW4
+                // ROW4
                 TextField {
                     text: "Field4 (LineEdit)"
                     Layout.preferredWidth: 250

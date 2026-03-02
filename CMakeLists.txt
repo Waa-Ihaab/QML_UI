@@ -5,6 +5,7 @@ project(sans_titre13 VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Quick QuickControls2)
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
 
 qt_standard_project_setup(REQUIRES 6.8)
@@ -20,6 +21,7 @@ qt_add_qml_module(appsans_titre13
         MenuScreen.qml
         Screen1.qml
         RESOURCES File.gitignore
+        SOURCES timerbackend.h timerbackend.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -36,6 +38,7 @@ set_target_properties(appsans_titre13 PROPERTIES
 target_link_libraries(appsans_titre13
     PRIVATE Qt6::Quick
 )
+target_link_libraries(appsans_titre13 PRIVATE Qt6::Widgets)
 
 include(GNUInstallDirs)
 install(TARGETS appsans_titre13
